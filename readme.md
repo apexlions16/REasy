@@ -7,10 +7,10 @@
 
 <br>
 
-**REasy Editor** is a quality-of-life toolkit for RE games that currently supports viewing and editing of some RE Engine files. It also includes miscellaneous tools to speed up your work. 
-Supports RSZ files (SCN, PFB, User) from all games, as well as UVAR, MSG, MOTBANK, MESH and CFIL files.
+**REasy Editor**, RE oyunları için geliştirilmiş bir kullanım kolaylığı araç setidir. Şu anda bazı RE Engine dosyalarını görüntülemeyi ve düzenlemeyi destekler. Ayrıca çalışma sürecinizi hızlandırmak için çeşitli yardımcı araçlar da içerir.
+Tüm oyunlardaki RSZ dosyalarını (SCN, PFB, User) destekler; bunun yanında UVAR, MSG, MOTBANK, MESH ve CFIL dosyaları için de destek sunar.
 
-REasy GUI is currently available in English and Chinese (limited) 
+REasy arayüzü şu anda İngilizce ve Çince (sınırlı) olarak kullanılabilir.
 
 
 <br>
@@ -27,154 +27,152 @@ REasy GUI is currently available in English and Chinese (limited)
 <br>
 
 
-## Features
+## Özellikler
 
 <br>
 <div align="center">
 
-<sub><sup>Note: Below formats are listed according to source code. The release archive may be outdated and might not yet support them.</sup></sub>  
-<sub><sup>Note 2: Many formats are not supported in RE7 non-rt.</sup></sub>  
-| File Type | Support | Tested On |
+<sub><sup>Not: Aşağıdaki formatlar kaynak koda göre listelenmiştir. Yayın arşivi güncel olmayabilir ve bu formatların tamamını henüz desteklemiyor olabilir.</sup></sub>  
+<sub><sup>Not 2: Birçok format RE7 non-rt sürümünde desteklenmez.</sup></sub>  
+| Dosya Türü | Destek | Test Edildiği Oyunlar |
 |-----------|---------|-----------|
-| UVAR      | ✅       | Most Titles  |
-| RCOL      | ✅    <sub><sup>[RE7, Wilds NOT SUPPORTED]</sup></sub>   | Most titles       |
-| SCN       | ✅       | Most titles       |
-| User       | ✅       |Most titles       |
-| PFB       | ✅       | Most titles      |
-| MSG       | ✅       | Most titles      |
-| MESH (3D Viewing)       | ✅ <sub><sup>[RE7, KGPG NOT SUPPORTED]</sup></sub>       | Most titles      |
-| PAK       | ✅       | Most titles      |
-| CFIL       | ✅       | Most titles      |
-| MOTBANK       | ✅       | Most titles      |
-| MCAMBANK       | ✅       | Most titles      |
-| TEX/DDS       | ✅ <sub><sup>[Viewing/Conversion]</sup></sub>      | Most titles      |
-| MDF       | ✅       |    Most titles   |
-| BNK/PCK       | ✅       |    Most titles   |
-| WEL       | ✅       |    Most titles|
-| WCC       | ✅       |    Most titles |
-| UVS       | ✅       |    Most titles   |
-| CDEF       | Coming Soon       |       |
-| EFX       | Coming Soon       |       |
+| UVAR      | ✅       | Çoğu oyun  |
+| RCOL      | ✅    <sub><sup>[RE7, Wilds DESTEKLENMEZ]</sup></sub>   | Çoğu oyun       |
+| SCN       | ✅       | Çoğu oyun       |
+| User       | ✅       |Çoğu oyun       |
+| PFB       | ✅       | Çoğu oyun      |
+| MSG       | ✅       | Çoğu oyun      |
+| MESH (3D Görüntüleme)       | ✅ <sub><sup>[RE7, KGPG DESTEKLENMEZ]</sup></sub>       | Çoğu oyun      |
+| PAK       | ✅       | Çoğu oyun      |
+| CFIL       | ✅       | Çoğu oyun      |
+| MOTBANK       | ✅       | Çoğu oyun      |
+| MCAMBANK       | ✅       | Çoğu oyun      |
+| TEX/DDS       | ✅ <sub><sup>[Görüntüleme/Dönüştürme]</sup></sub>      | Çoğu oyun      |
+| MDF       | ✅       |    Çoğu oyun   |
+| BNK/PCK       | ✅       |    Çoğu oyun   |
+| WEL       | ✅       |    Çoğu oyun|
+| WCC       | ✅       |    Çoğu oyun |
+| UVS       | ✅       |    Çoğu oyun   |
+| CDEF       | Yakında       |       |
+| EFX       | Yakında       |       |
   
 </div>
 <br>
 <br>
 
-- **PAK File Extraction and Creation**  
-  - REasy currently has the fastest PAK extraction system.
-  - Support for single entry extraction.
-  - Regex search in the file list is supported. 
+- **PAK Dosyası Çıkarma ve Oluşturma**  
+  - REasy şu anda en hızlı PAK çıkarma sistemine sahiptir.
+  - Tekil giriş çıkarma desteği sunar.
+  - Dosya listesinde Regex araması desteklenir.
  
-- **3D Mesh Inspecting**
-  
-- **RSZ Extended File Viewing and Editing:**  
-  - User, PFB and SCN files are supported with advanced editing.
-  - Template Manager to export your favorite GameObjects and import them in different files (Exported GameObjects can be found in the "templates" directory in plaintext (JSON)).
-  - Clipboard system allowing to copy paste array elements, components and GameObjects across different files (JSON serialized).
-  - Community Templates browser where you can download templates from other people, rate them and upload your own for different games (accessible in Template Manager).
-  - Up-to-date improved RSZ dumps for all games.
-  - Obsolete RSZ file detector (available in >Tools)
-  - Support for all versions of RSZ files dating from RE7.
-  - And much more..
+- **3D Mesh İnceleme**
    
+- **RSZ Genişletilmiş Dosya Görüntüleme ve Düzenleme:**  
+  - User, PFB ve SCN dosyaları gelişmiş düzenleme özellikleriyle desteklenir.
+  - Template Manager ile favori GameObject öğelerinizi dışa aktarabilir ve bunları farklı dosyalara içe aktarabilirsiniz. Dışa aktarılan GameObject öğeleri `templates` dizininde düz metin (JSON) olarak bulunur.
+  - Farklı dosyalar arasında array öğeleri, component'ler ve GameObject'ler için kopyala-yapıştır yapmayı sağlayan pano sistemi bulunur (JSON olarak serileştirilir).
+  - Community Templates tarayıcısı sayesinde farklı oyunlar için diğer kullanıcıların şablonlarını indirebilir, puanlayabilir ve kendi şablonlarınızı yükleyebilirsiniz (Template Manager içinden erişilebilir).
+  - Tüm oyunlar için güncel ve iyileştirilmiş RSZ dump dosyaları bulunur.
+  - Eski/uyumsuz RSZ dosyası algılayıcısı mevcuttur (`Tools` bölümünde bulunur).
+  - RE7'den itibaren kullanılan tüm RSZ dosya sürümleri desteklenir.
+  - Ve çok daha fazlası...
+    
 - **RSZ Diff Viewer:**  
-  - Allows comparing of RSZ files. Currently, only SCN files are supported. 
+  - RSZ dosyalarını karşılaştırmayı sağlar. Şu anda yalnızca SCN dosyaları desteklenmektedir.
 
-- **Search Functionality:**  
-  Search all files across directories for:
-  - Specific text (UTF-16LE encoded)
-  - 32-bit numbers (with hexadecimal display)
-  - GUIDs (with conversion from standard format)
-  - Specific RSZ field values
+- **Arama İşlevi:**  
+  Dizinler genelinde tüm dosyalarda şunları arayabilirsiniz:
+  - Belirli metinler (UTF-16LE kodlamalı)
+  - 32-bit sayılar (hexadecimal gösterimle)
+  - GUID değerleri (standart formattan dönüştürme ile)
+  - Belirli RSZ alan değerleri
 
 - **Project Manager:**
- 
-  Ability to create mods and export them as .PAK or Fluffy Manager .ZIP archive (File > Create Project).
   
--  **Backup System for Files**
+  Mod oluşturma ve bunları `.PAK` ya da Fluffy Manager `.ZIP` arşivi olarak dışa aktarma olanağı sunar (`File > Create Project`).
+   
+-  **Dosyalar için Yedekleme Sistemi**
 
--  **Dark Mode**  
+-  **Karanlık Mod**  
 
 
 
-## Guides:
+## Rehberler:
 
 - **Wiki:**  
-  Accessible [here](https://github.com/seifhassine/REasy-Wiki/blob/main/README.md). Work in progress.
-  
-- **Adding New Flags to RE4R:**  
-  I tested adding 22000 new flags (file size went from 2mb to ~16mb), and tried some of them randomly. Game was stable. At 50k added flags, it crashes when a gamesave is triggered. To determine the exact threshold, your testing and feedback are needed. But 20k should be more than enough. (I wrote a guide [here](https://www.nexusmods.com/residentevil42023/articles/346))
+  [Buradan](https://github.com/seifhassine/REasy-Wiki/blob/main/README.md) erişilebilir. Çalışma devam ediyor.
+   
+- **RE4R'ye Yeni Flag Ekleme:**  
+  22000 yeni flag eklemeyi test ettim (dosya boyutu 2 MB'tan yaklaşık 16 MB'a çıktı) ve bazılarını rastgele denedim. Oyun stabil çalıştı. 50 bin eklenen flag seviyesinde, oyun kaydı tetiklendiğinde çöküyor. Kesin sınırı belirlemek için testlerinize ve geri bildiriminize ihtiyaç var. Ancak 20 bin fazlasıyla yeterli olmalı. ([Burada](https://www.nexusmods.com/residentevil42023/articles/346) bir rehber yazdım.)
 
 - **RE8:**
-  [Modding Weapons and Items with REasy Editor](https://www.nexusmods.com/residentevilvillage/articles/45) by [matalayudasleazy](https://next.nexusmods.com/profile/matalayudasleazy?gameId=3669)
+  [Modding Weapons and Items with REasy Editor](https://www.nexusmods.com/residentevilvillage/articles/45) - [matalayudasleazy](https://next.nexusmods.com/profile/matalayudasleazy?gameId=3669) tarafından hazırlanmıştır.
 
-## Correctness
+## Doğruluk
 
-- All RSZ (.user, .pfb, .scn) files from most games are tested before release:
- 
+- Çıkıştan önce çoğu oyundaki tüm RSZ (`.user`, `.pfb`, `.scn`) dosyaları test edilir:
+  
     [![Build and Package REasy](https://github.com/seifhassine/REasy/actions/workflows/build.yml/badge.svg)](https://github.com/seifhassine/REasy/actions/workflows/build.yml)
 
 
-## RSZ Dumps:
+## RSZ Dump Dosyaları:
 
-- Under [/resources/data/dumps](https://github.com/seifhassine/REasy/tree/master/resources/data/dumps) you will find a list of updated RSZ templates for all games. 
+- [/resources/data/dumps](https://github.com/seifhassine/REasy/tree/master/resources/data/dumps) altında tüm oyunlar için güncellenmiş RSZ şablonlarının listesini bulabilirsiniz.
 
-## Installation
+## Kurulum
 
-- Run build.bat
+- `build.bat` dosyasını çalıştırın.
 
-- Python dependencies are listed in requirements.txt
+- Python bağımlılıkları `requirements.txt` dosyasında listelenmiştir.
 
-- Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
+- Microsoft Visual C++ 14.0 veya daha yeni bir sürüm gereklidir. Bunu "Microsoft C++ Build Tools" ile edinebilirsiniz: https://visualstudio.microsoft.com/visual-cpp-build-tools/
 
-- Python 3.12+ is required.
+- Python 3.12+ gereklidir.
 
-- If build.bat complains about not having 3.12+, then run python --version to check which version is being used by default.
+- `build.bat`, 3.12+ sürümünün bulunmadığını söylüyorsa varsayılan olarak hangi Python sürümünün kullanıldığını kontrol etmek için `python --version` komutunu çalıştırın.
 
-- If you want to run REasy.py, make sure you either use the build batch script or `python setup.py build_ext --inplace
-` beforehand.
+- `REasy.py` dosyasını çalıştırmak istiyorsanız, öncesinde build batch script'ini kullanmalı veya `python setup.py build_ext --inplace` komutunu çalıştırmalısınız.
 
-If you want to run REasy on Linux and encounter the error "Aborted" on launch, try installing libxcb-cursor0 using apt-get. 
+REasy'yi Linux üzerinde çalıştırmak istiyorsanız ve açılışta "Aborted" hatasıyla karşılaşırsanız, `apt-get` kullanarak `libxcb-cursor0` paketini yüklemeyi deneyin.
 
-## Credits:
+## Katkıda Bulunanlar:
 
-@alphazolam for the 010 RE templates.
+010 RE şablonları için @alphazolam.
 
-@TrikzMe for RE's MurMurHash3 
+RE'nin MurMurHash3 implementasyonu için @TrikzMe.
 
-@praydog, for making the RSZ JSON dumps and REF. 
+RSZ JSON dump dosyalarını ve REF'i hazırladığı için @praydog.
 
-@don on Discord for helping out with .exe debugging related stuff.
+`.exe` hata ayıklama ile ilgili konularda yardımcı olduğu için Discord'dan @don.
 
-@shadowcookie for consulting with misc. stuff as well as many updated file format structures. 
+Çeşitli konularda danışmanlık sağladığı ve birçok güncel dosya formatı yapısını paylaştığı için @shadowcookie.
 
-@Ekey - PAK file decryption algorithms
+PAK dosyası şifre çözme algoritmaları için @Ekey.
 
-@NSACloud for the MPLY flags on MHWILDS+ 
+MHWILDS+ üzerindeki MPLY flag'leri için @NSACloud.
 
-## Support REasy:
+## REasy'yi Destekleyin:
 
-If you appreciate my work and would like to support the development of the tool, you can support me through this [link](https://linktr.ee/seifhassine)
+Çalışmamı beğeniyor ve aracın geliştirilmesini desteklemek istiyorsanız, bu [bağlantı](https://linktr.ee/seifhassine) üzerinden destek olabilirsiniz.
 
-## License, Contributions:
+## Lisans ve Katkılar:
 
-REasy is under MIT license.
-You are wlecome to contribute to the project. I am currently active and will review PRs.
+REasy, MIT lisansı altındadır.
+Projeye katkıda bulunabilirsiniz. Şu anda aktifim ve PR'ları inceleyeceğim.
 
-## Third-Party Components
+## Üçüncü Taraf Bileşenler
 
-This project uses **[PySide6](https://pypi.org/project/PySide6/)** (Qt for Python), licensed under **LGPL version 3**.
-For more information, see:  
+Bu proje, **[PySide6](https://pypi.org/project/PySide6/)** (Qt for Python) kullanır ve **LGPL version 3** lisansı altındadır.
+Daha fazla bilgi için:  
 - [Qt Licensing Information](https://www.qt.io/licensing/)  
 - [LGPL v3 License Text](https://www.gnu.org/licenses/lgpl-3.0.html)
-  
-## Sponsors
+   
+## Sponsorlar
 <table>
  <tbody>
   <tr>
    <td align="center"><img alt="[SignPath]" src="https://avatars.githubusercontent.com/u/34448643" height="30"/></td>
-   <td>Free code signing on Windows provided by <a href="https://signpath.io/">SignPath.io</a>, certificate by <a href="https://signpath.org/">SignPath Foundation</a></td>
+   <td>Windows üzerinde ücretsiz kod imzalama hizmeti <a href="https://signpath.io/">SignPath.io</a> tarafından, sertifika ise <a href="https://signpath.org/">SignPath Foundation</a> tarafından sağlanmaktadır.</td>
   </tr>
  </tbody>
 </table>
-
