@@ -7,7 +7,7 @@ REM Check Python 3.12+
 python -c "import sys; exit(0 if sys.version_info >= (3,12) else 1)" 2>nul
 if errorlevel 1 (
     echo ERROR: Python 3.12+ required!
-    pause
+    if not defined CI pause
     exit /b 1
 )
 echo Python 3.12+ detected - OK
@@ -26,7 +26,7 @@ echo Building gdeflate helper...
 dotnet publish "%HELPER_PROJ%" -c Release -r win-x64 --self-contained false -o "%HELPER_OUT%"
 if errorlevel 1 (
     echo Failed to build gdeflate helper.
-    pause
+    if not defined CI pause
     exit /b 1
 )
 
@@ -38,8 +38,8 @@ for %%F in (
     "runtimes\win-x64\native\libGDeflate.dll"
 ) do (
     if not exist "%HELPER_OUT%\%%~F" (
-        echo Missing helper artifact: %%~F
-        pause
+        echo Missing helper artifact: %%F
+        if not defined CI pause
         exit /b 1
     )
 )
@@ -60,7 +60,7 @@ python -m PyInstaller --onefile --windowed --icon=resources/icons/reasy_editor_l
   --add-data "%HELPER_OUT%\reasy_tex_gdeflate_helper.runtimeconfig.json;tools" ^
   --add-data "%HELPER_OUT%\reasy_tex_gdeflate_helper.deps.json;tools" ^
   REasy.py
-  
+   
 xcopy /E /I /Y resources dist\resources
 if exist dist\resources\data\dumps rmdir /S /Q dist\resources\data\dumps
 if exist dist\resources\patches rmdir /S /Q dist\resources\patches
@@ -93,7 +93,7 @@ copy "resources\data\dumps\rszmhst3.json" "dist\rszmhst3.json"
 
 if errorlevel 1 (
     echo 64-bit build FAILED.
-    pause
+    if not defined CI pause
     goto end
 )
 
@@ -102,7 +102,7 @@ if exist dist\REasy.exe (
     move /Y dist\REasy.exe dist\REasy.exe
 ) else (
     echo Could not find dist\REasy.exe after 64-bit build.
-    pause
+    if not defined CI pause
     goto end
 )
 echo 64-bit build succeeded.
@@ -110,6 +110,6 @@ echo 64-bit build succeeded.
 echo.
 echo The executable is located in the "dist" folder as:
 echo    REasy.exe  (64-bit)
-pause
+if not defined CI pause
 
 :end
