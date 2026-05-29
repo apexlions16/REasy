@@ -1,0 +1,3 @@
+source_id,name,dialogue_text,character,replacement_filename,notes
+42190312,vo_leon_combat_003,"Example original subtitle line",Leon,42190312_TR.wav,"Source ID based replacement"
+88123012,ui_menu_confirm,"",UI,ui_menu_confirm.wav,"Name based replacement candidate"
